@@ -1,5 +1,22 @@
 {
   "dependencies": {
     "express": "^4.17.2"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "cit270",
+  "version": "1.0.0",
+  "main": "helloworld.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gschiess/cit270.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gschiess/cit270/issues"
+  },
+  "homepage": "https://github.com/gschiess/cit270#readme",
+  "description": ""
 }
