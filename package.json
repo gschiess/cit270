@@ -3,7 +3,8 @@
     "express": "^4.17.2"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "hello": "node helloworld.js"
   },
   "name": "cit270",
   "version": "1.0.0",
