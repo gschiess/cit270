@@ -16,6 +16,7 @@ https
   .createServer(
     {
       key: fs.readFileSync("server.key"),
+      passphrase: ("P@ssw0rd"),
       cert: fs.readFileSync("server.cert"),
     },
     app
