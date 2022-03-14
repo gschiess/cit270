@@ -3,7 +3,7 @@
 let userName = "";
 let password = "";
 let verifypassword = "";
-let passwordRegEx=/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%!]).{6,40})/;
+let passwordRegEx=/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[_*@#$%!]).{6,40})/;
 
 function setusername(){
     userName = $("#username").val();
@@ -41,7 +41,7 @@ function checkexpiredtoken(token){
         url: '/validate/'+token,
         data: JSON.stringify({usertoken}),
         success: function(data){savetoken(data)},
-        contentType: "application/text",
+        contentType: "application/json",
         dataType: 'text' })
     }
 }

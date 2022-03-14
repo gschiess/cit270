@@ -4,7 +4,9 @@ const https = require("https");
 const md5 = require("md5");
 const app = express();
 const port = 4443;
-const fs = require('fs')
+const fs = require('fs');
+
+app.use(express.static('public'));
 
 app.use(bodyParser.json());
 
@@ -29,10 +31,11 @@ app.post("/login", (req, res) => {
   console.log(JSON.stringify(req.body));
   if (
     req.body.userName == "gabrielschiess" &&
-    md5(req.body.password) == "5f4dcc3b5aa765d61d8327deb882cf99"
+    md5(req.body.password) == "5d9d8d9b34463537eb359877ca5cdf78"
   ) {
     res.send("Welcome!");
   } else {
+    res.status(401); //Unathorized
     res.send("Get Thee Hence!");
   }
 });
