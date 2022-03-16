@@ -56,7 +56,7 @@ function userlogin(){
         success: function(data) {
             window.location.href = "/timer.html#"+data;//add the token to the url
         },
-        contentType: "application/text",
+        contentType: "application/json",
         dataType: 'text'
     });
 
@@ -98,7 +98,7 @@ function createuser(){
 //        readonlyforms("newUser");
 //        alert(readonlyforms("newUser"));
         window.location.href = "/index.html"},
-        contentType: "application/text",
+        contentType: "application/json",
         dataType: 'text'
     });
 }
@@ -111,7 +111,7 @@ function getstephistory(){
             success: function(data) { alert(data);
             json = $.parseJSON(data);
             $('#results').html(json.name+' Total Steps: ' + json.stepTotal)},
-            contentType: "application/text",
+            contentType: "application/json",
             dataType: 'text'
         });
 }
